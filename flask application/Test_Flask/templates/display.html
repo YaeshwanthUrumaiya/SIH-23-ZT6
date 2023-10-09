@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translated Output</title>
+  <style>
+    textarea {
+      width: 95vw;
+      height: 80vh;
+      resize: none; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Translated Text:</h1>
+  <br>
+  {% if file_type == "PythonString" %}
+    <textarea id="text">{{ data }}</textarea>
+  {% else %}
+    <textarea id="text">
+    {% for paragraph in data %}
+    {{ paragraph.text }}    
+    {% endfor %}
+    </textarea>
+  {% endif %}
+  <br>
+  <input type="button" value="Save Text to File" onclick="saveTextToFile()" />
+
+  <script>
+    function selectText(textarea) {
+      textarea.select();
+    }
+
+    function saveTextToFile() {
+      const text = document.getElementById("text").value;
+      const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+      const path = "path/to/your/directory/"; // Replace with your desired path
+      const filename = "output.txt";
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</body>
+</html>
