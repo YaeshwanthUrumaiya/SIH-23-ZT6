@@ -1,6 +1,8 @@
 deep_translator==1.11.4
+PyMuPDF==1.23.3
 fitz==0.0.1.dev2
 Flask==2.2.2
+Werkzeug==2.2.3
 opencv_python==4.8.0.76
 pytesseract==0.3.10
 python_docx==0.8.11
