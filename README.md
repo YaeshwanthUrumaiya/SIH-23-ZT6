@@ -2,14 +2,14 @@
 
 We recommend you to create an new Environment in Anaconda Prompt and Install all of the required libraries.
 
-`conda create --name sih23zt6 python=3.11.5 pip
-conda activate sih23zt6`
+`conda create --name sih23zt6 python=3.11.5 pip`
+`conda activate sih23zt6`
 
 (to create the enviroment and activate it. Please replace the word "sih23zt6" with your desired name for the enviroment.)
 
 
-`cd /path/to/the/clone/of/the/repository
-pip install -r requirements.txt`
+`cd /path/to/the/clone/of/the/repository`
+`pip install -r requirements.txt`
 
 (to nagivate to the github repository and then install all of the required libraries.)
 
