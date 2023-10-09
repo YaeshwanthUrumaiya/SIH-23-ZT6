@@ -8,7 +8,7 @@ import fitz
 from pptx import Presentation
 import webbrowser
 
-pytesseract.pytesseract.tesseract_cmd = 'flask application\\Tesseract-ocr\\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = 'Tesseract-ocr\\tesseract.exe'
 
 def Run_Model_CV(filepath,og_lang,dir_lang,model_lang,configg='--oem 3 --psm 6'):
   image = cv2.imread(filepath)
